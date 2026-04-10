@@ -35,11 +35,11 @@ if response.status_code == 200:
 
 webhook = DiscordWebhook(url=webhook_url)
 
-embed = DiscordEmbed(title="__Server Query__", description=f"`{hostname}:{port}` \n> {motd}", color="03b2f8")
+embed = DiscordEmbed(title="__Server Update__", description=f"`{hostname}` \n> {motd}", color="03b2f8")
 embed.add_embed_field(name=f"__Players Online:__ {online}", value=f"{players_online}")
-embed.set_footer(text=f"{ip} {software} {version}", icon_url="https://cdn.icon-icons.com/icons2/2699/PNG/512/minecraft_logo_icon_168974.png")
+embed.set_footer(text=f"{software} {version}", icon_url="https://cdn.icon-icons.com/icons2/2699/PNG/512/minecraft_logo_icon_168974.png")
 embed.set_timestamp()
-embed.set_thumbnail(url="https://cdn.icon-icons.com/icons2/2072/PNG/512/data_hosting_information_internet_security_server_storage_icon_127051.png")
+#embed.set_thumbnail(url="https://cdn.icon-icons.com/icons2/2072/PNG/512/data_hosting_information_internet_security_server_storage_icon_127051.png")
 
 webhook.add_embed(embed)
 webhook.execute()
