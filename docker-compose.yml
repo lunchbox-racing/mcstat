@@ -2,7 +2,7 @@ version: '3'
 
 services:
   mc-query:
-    image: lunchbox-racing/mcstat:latest
+    image: teamitk/mcstat:latest
     environment:
       - SERVER=ip or hostname
       - WEBHOOK_URL=your discord webhook url
